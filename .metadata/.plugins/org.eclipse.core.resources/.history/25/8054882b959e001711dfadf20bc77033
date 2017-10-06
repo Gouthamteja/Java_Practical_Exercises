@@ -1,0 +1,67 @@
+package practise;
+
+
+	import java.util.Scanner;
+	
+	class first
+	{
+	public static  int checkPalindrome(String s)
+	{
+		// reverse the given String
+		String reverse = new StringBuffer(s).reverse().toString();
+
+		// check whether the string is palindrome or not
+		if (s.equals(reverse))
+		{System.out.println("Yes");
+		return 1;
+		}
+		else
+		{
+		System.out.println("No");
+		return 0;
+		}
+		}
+	
+	
+
+	public static void main (String[] args)
+	{
+		System.out.println("Input your number and press enter: ");
+	      Scanner in = new Scanner(System.in);
+	     int n = in.nextInt();
+	      
+	      String str_num=String.valueOf(n);
+	     
+	     int k= checkPalindrome(str_num);
+	      
+	      
+          int x;
+          int i=n;
+          int Even=0,Odd=0;
+          
+          while(i!=0)
+          {
+                  x=i%10;
+                  if(x%2==0)
+                  {
+                          Even=Even+x;
+                  }
+                  else
+                  {
+                          Odd=Odd+x;
+                  }
+                  i=i/10;
+                  
+          }
+          System.out.println("Sum of Even NO :"+Even);
+  }
+	      
+//	      System.out.println("Reverse of specified number is: "+rev_num);
+		
+	}
+	
+	
+
+	
+	
+	

@@ -1,0 +1,47 @@
+package PE_1;
+
+
+
+	class outer{
+		public int dist;
+		public int speed;
+		public outer()
+		{
+			System.out.println("hai base");
+
+		}
+		// the Bicycle class has one constructor
+		public outer(int dist, int speed)
+		{
+			this.dist = dist;
+			this.speed = speed;
+		}
+		
+		
+	}
+	class inner extends outer {
+		
+
+		public inner(int dist, int speed)
+		{
+			this.dist = dist;
+			this.speed = speed;
+		}
+		
+		public void time(int dist, int speed) {
+			int t= this.dist/this.speed;
+			System.out.println(t);
+		}
+	}
+	
+	
+	
+	public class pe_2 {
+	public static void main(String args[]) 
+		{
+			inner i2 = new inner(3000, 100);
+			i2.time(3000, 100);
+
+	
+	}
+}

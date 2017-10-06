@@ -1,0 +1,27 @@
+package practise;
+
+import java.util.Scanner;
+
+public class fourth {
+
+
+	
+	public static void main (String[] args)
+	{
+		System.out.println("Input your number and press enter: ");
+	      Scanner in = new Scanner(System.in);
+	     int n = in.nextInt();
+	    
+	     for(int i=1;i<n;i++)
+	     {
+	    	int j=i;
+			while( j>i)
+	    	 { 
+	    		 System.out.println(i);
+	    	     j--;
+	    	 }
+	     }
+	}
+	     
+	
+}

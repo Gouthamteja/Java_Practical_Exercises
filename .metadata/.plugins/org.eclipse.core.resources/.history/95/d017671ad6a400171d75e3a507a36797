@@ -1,0 +1,139 @@
+package com.stackroute.datamunger.query;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.stackroute.datamunger.query.parser.Restriction;
+
+//this class contains methods to evaluate expressions
+public class Filter {
+	
+	/* 
+	 * the evaluateExpression() method of this class is responsible for evaluating 
+	 * the expressions mentioned in the query. It has to be noted that the process 
+	 * of evaluating expressions will be different for different data types. there 
+	 * are 6 operators that can exist within a query i.e. >=,<=,<,>,!=,= This method 
+	 * should be able to evaluate all of them. 
+	 * Note: while evaluating string expressions, please handle uppercase and lowercase 
+	 * 
+	 */
+	public evaluateExpression() {
+		
+		public String getConditionsPartQuery(String queryString) {
+			//System.out.println("conditions" + !queryString.contains("where"));
+			if(!queryString.contains("where")) return null ;
+			String[] arr = queryString.split(" "); 
+			String ret = "";
+			boolean bool = true;
+			boolean groupBy = false;
+			for(int i = 0; i < arr.length; i++) {
+				if(arr[i].toLowerCase().equals("where")) bool = false;
+				else if(arr[i].toLowerCase().equals("order") || arr[i].toLowerCase().equals("group") ) break;
+				
+				if(!bool) {
+					ret += arr[i] + " ";
+				}
+			} 
+			ret = ret.trim();
+			
+			ret = ret.substring(ret.indexOf(" "), ret.length()).replaceFirst("\\s++$", ""); 
+			//System.out.println(" season > 2014 and city ='bangalore' " == ret);
+			//System.out.println("Condition part:" + (" season > 2014 and city ='bangalore' " ==ret));
+			if(queryString.contains("group") ||queryString.contains("order")  ) return ret + " ";
+			return ret;   
+		}
+		public List<Restriction>  getConditions(String queryString)  {
+			if(!queryString.contains("where")) return null; 
+			queryString = getConditionsPartQuery(queryString);
+			List<Restriction> list = new ArrayList<Restriction>();
+			queryString = queryString.substring(queryString.indexOf(" "), queryString.length()).trim();
+			String[] arr = queryString.split("(\\band\\b|\\bor\\b)");
+			for(int i = 0; i< arr.length; i++) {
+				arr[i] = arr[i].trim();
+				//System.out.println("condition " + (i+1) + ": " + arr[i]);
+				String propertyName = "";
+				String propertyValue = "";
+				if(arr[i].contains(">=")) {
+					String ret[] = arr[i].split(">=");
+					propertyName = ret[0].trim();
+					propertyValue = ret[1].trim();   
+					list.add(new Restriction(propertyName,">=",propertyValue));
+				}else if(arr[i].contains("<=")) {
+					String ret[] = arr[i].split("<=");
+					propertyName = ret[0].trim();
+					propertyValue = ret[1].trim(); 
+					System.out.println(propertyName + "=" + propertyValue);
+					list.add(new Restriction(propertyName,"<=",propertyValue));
+				}
+				//method containing implementation of notEqualTo operator
+				else if(arr[i].contains("!=")) {
+					String ret[] = arr[i].split("!=");
+					propertyName = ret[0].trim();
+					propertyValue = ret[1].replaceAll("^\"|\"$","").trim(); 
+					System.out.println(propertyName + "=" + propertyValue);
+					list.add(new Restriction(propertyName,"!=",propertyValue));
+				}	
+				//method containing implementation of equalTo operator
+
+				else if(arr[i].contains("=")) {
+					String ret[] = arr[i].split("=");
+					propertyName = ret[0].trim();
+					propertyValue = ret[1].replaceAll("^\"|\"$","").trim(); 
+					System.out.println(propertyName + "=" + propertyValue);
+					list.add(new Restriction(propertyName,"=",propertyValue));
+				}else if(arr[i].contains(">")) {
+					String ret[] = arr[i].split(">");
+					propertyName = ret[0].trim();
+					propertyValue = ret[1].trim(); 
+					System.out.println(propertyName + "=" + propertyValue);
+					list.add(new Restriction(propertyName,">",propertyValue));
+				}else if(arr[i].contains("<")) {
+					String ret[] = arr[i].split("<");
+					propertyName = ret[0].trim();
+					propertyValue = ret[1].trim(); 
+					System.out.println(propertyName + "=" + propertyValue);
+					list.add(new Restriction(propertyName,"<",propertyValue));
+				}
+			}
+			return list;
+		}
+		
+	
+	
+	
+	//method containing implementation of equalTo operator
+	
+	
+	
+	//method containing implementation of notEqualTo operator
+	
+	
+	
+	
+	
+	
+	
+	//method containing implementation of greaterThan operator
+	
+	
+	
+	
+	
+	
+	
+	//method containing implementation of greaterThanOrEqualTo operator
+	
+	
+	
+	
+	
+	
+	//method containing implementation of lessThan operator
+	  
+	
+	
+	
+	
+	//method containing implementation of lessThanOrEqualTo operator
+	
+}

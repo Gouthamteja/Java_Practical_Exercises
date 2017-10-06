@@ -1,0 +1,30 @@
+import java.util.Scanner;
+package com.java2novice.wrapper.integer;
+
+public class pe_7 {
+
+	public static void main(String args[])
+	   { 
+		
+		
+	  while(i>Integer.MAX_VALUE)
+		   while(fact(i))
+	      System.out.println("factorial of" +i+"is"+n);
+	    
+	   }
+	
+	      public static int fact (int num)
+		   { 
+		    if(num == 1||num==0)
+		   {
+		        return 1;
+		    }
+		    else
+		    {
+		    	return num*fact(num-1);
+		   	}
+
+		   }
+	
+	
+}

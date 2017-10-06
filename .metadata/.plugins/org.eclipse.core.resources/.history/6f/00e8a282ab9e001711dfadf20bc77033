@@ -1,0 +1,21 @@
+package practise;
+
+import java.util.Scanner;
+
+public class sixth {
+
+
+    public static void main(String args[])
+    {
+    	
+    	
+        
+        System.out.print("Enter an Alphabet : ");
+        Scanner scan = new Scanner(System.in);
+        char c = scan.next().charAt(0);
+		
+        
+    }
+    
+    
+}

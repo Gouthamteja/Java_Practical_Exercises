@@ -1,0 +1,42 @@
+package practise;
+
+
+	
+	import java.util.Scanner;
+
+	public class third
+	{
+	    public static void main(String args[])
+	    {
+	    	
+	    	
+	        char ch;
+	        System.out.print("Enter an Alphabet : ");
+	        Scanner scan = new Scanner(System.in);
+	        
+	        String s=scan.next();  
+			
+	        
+	       
+	        
+	        
+	        
+	        for (int index = 0; index < s.length();
+	        		index++) {
+	        		     ch = s.charAt(index);
+	        		     if(ch=='a' || ch=='A' || ch=='e' || ch=='E' ||
+	        		 	        ch=='i' || ch=='I' || ch=='o' || ch=='O' ||
+	        		 	        ch=='u' || ch=='U')
+	        		 	        {
+	        		 	            System.out.print("This is a Vowel");
+	        		 	        }
+	        		 	        else
+	        		 	        {
+	        		 	            System.out.print("This is not a Vowel");
+	        		 	        }
+	        		}
+			
+	       
+	    }
+	}
+

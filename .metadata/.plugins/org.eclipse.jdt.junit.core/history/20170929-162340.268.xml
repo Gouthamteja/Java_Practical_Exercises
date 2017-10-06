@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DataMungerTest (4)" project="DataMungerStep5_boilerplate" tests="24" started="24" failures="0" errors="0" ignored="0">
+  <testsuite name="com.stackroute.datamunger.test.DataMungerTest" time="1.703">
+    <testcase name="testGetFields" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.002"/>
+    <testcase name="testGetFieldsAndRestrictions" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.004"/>
+    <testcase name="testGetFieldsAndRestrictionsFailure" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.001"/>
+    <testcase name="testGetFieldsFailure" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.002"/>
+    <testcase name="testGetFileName" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.005"/>
+    <testcase name="testGetFileNameFailure" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.003"/>
+    <testcase name="testGetGroupByClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.0"/>
+    <testcase name="testGetGroupByOrderByClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.01"/>
+    <testcase name="testGetGroupByOrderByClauseFailure" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.006"/>
+    <testcase name="testGetOrderByAndWhereConditionClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.008"/>
+    <testcase name="testGetOrderByAndWhereConditionClauseFailure" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.001"/>
+    <testcase name="testGetOrderByClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.003"/>
+    <testcase name="testGetOrderByWithoutWhereClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.0"/>
+    <testcase name="testGetRestrictionsAndAggregateFunctions" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.002"/>
+    <testcase name="testSelectAllWithoutWhereClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.214"/>
+    <testcase name="testSelectColumnsWithoutWhereClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.342"/>
+    <testcase name="testWithWhereEqualAndNotEqualClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.026"/>
+    <testcase name="testWithWhereGreaterThanClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.009"/>
+    <testcase name="testWithWhereGreaterThanOrEqualToClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.3"/>
+    <testcase name="testWithWhereLessThanClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.014"/>
+    <testcase name="testWithWhereLessThanOrEqualToClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.438"/>
+    <testcase name="testWithWhereNotEqualToClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.113"/>
+    <testcase name="testWithWhereThreeConditionsEqualOrNotEqualClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.182"/>
+    <testcase name="testWithWhereTwoConditionsEqualOrNotEqualClause" classname="com.stackroute.datamunger.test.DataMungerTest" time="0.016"/>
+  </testsuite>
+</testrun>

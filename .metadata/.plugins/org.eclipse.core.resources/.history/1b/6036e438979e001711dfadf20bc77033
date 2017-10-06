@@ -1,0 +1,27 @@
+package practise;
+
+import java.util.Scanner;
+
+public class second {
+	
+	
+	
+	
+	public static void main (String[] args)
+	{
+		System.out.println("Input your number and press enter: ");
+	      Scanner in = new Scanner(System.in);
+	     int n = in.nextInt();
+	     
+	     if (n>20&&n<30)
+	     {  	 
+	    	 if(n%2==0)
+	    		 System.out.println("Jerry ");
+	    	 else
+	    		 System.out.println("tom ");
+	     }
+	}
+	     
+		
+	
+	}

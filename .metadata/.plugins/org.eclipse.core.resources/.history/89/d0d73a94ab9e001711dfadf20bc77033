@@ -1,0 +1,36 @@
+package practise;
+
+import java.util.Scanner;
+import java.text.DecimalFormat;  
+
+public class sixth {
+
+
+    public static void main(String args[])
+    {
+    	
+    	
+        
+        System.out.print("Enter an Alphabet : ");
+        Scanner scan = new Scanner(System.in);
+        char ch = scan.next().charAt(0);
+		  
+        
+        if (Character.isUpperCase(ch)) {  
+        	System.out.print("upper case ");   
+        }  
+        else if (Character.isLowerCase(ch)) {  
+        	System.out.print("lower case");
+        }  
+        else if (Character.isDigit(ch)) {  
+        	System.out.print("Digit");
+        }  
+        else {  
+        	System.out.print("other symbol ");  
+        }  
+    }  
+        
+    }
+    
+    
+}
